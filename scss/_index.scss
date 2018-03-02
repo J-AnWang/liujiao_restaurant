@@ -1,0 +1,240 @@
+#tips {
+  margin-top: $section-top;
+  color: $main-color;
+  .title {
+    text-align: center;
+    h3 {
+      font-weight: lighter;
+      font-size: $font-m *1.5;
+      letter-spacing: 2px;
+    }
+    .broken-line {
+      color: #9F9E9E;
+      .blank-1 {
+        width: 20%;
+        float: left;
+        margin-left: 15%;
+      }
+      .blank-2 {
+        width: 20%;
+        float: right;
+        margin-right: 15%;
+      }
+    }
+  }
+  .detail {
+    margin-top: 20px;
+    .tip {
+      @include col-three;
+      text-align: center;
+      img {
+        border-radius: 200px;
+      }
+      .tip-content {
+        margin-top: 20px;
+        h5 {
+          font-size: $font-m * 1.25;
+          font-weight: lighter;
+        }
+        p {
+          margin-top: 11px;
+          text-align: left;
+        }
+      }
+      @include phone {
+        float: none;
+        width: 100%;
+      }
+    }
+  }
+}
+
+#chef {
+  margin-top: $section-top;
+  background-color: $main-color;
+  color: #E0D8D5;
+  .chef-img {
+    float: left;
+    width: 48%;
+    margin-left: 1%;
+    margin-right: 1%;
+    img {
+      display: block;
+      height: 100%;
+    }
+    @include desktop{
+      width: 38%;
+    }
+    @include phone {
+      float: none;
+      width: 100%;
+    }
+  }
+  .chef-info {
+    float: right;
+    width: 48%;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding: 50px 10px 50px 0;
+    .title {
+      font-size: $font-l * 1.25;
+      font-weight: lighter;
+      letter-spacing: 2px;
+    }
+    .subtitle {
+      font-size: $font-l;
+      font-weight: lighter;
+      text-transform: capitalize;
+      letter-spacing: 1px;
+    }
+    .content {
+      margin-top: 16px;
+      line-height: 1.15;
+      letter-spacing: 1px;
+    }
+    @include desktop{
+      width: 58%;
+    }
+    @include phone {
+      float: none;
+      width: 100%;
+      padding: 10% 20px;
+    }
+  }
+}
+
+.feelings {
+  margin-top: $section-top;
+  color: $main-color;
+  .title {
+    font-weight: lighter;
+    font-size: $font-m *1.5;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+  .feelings-detail {
+    margin-top: 30px;
+    .feeling {
+      @include col-three;
+      .feeling-img {
+        float: left;
+        width: 24%;
+        margin-left: 0.5%;
+        margin-right: 0.5%;
+        img {
+          border-radius: 67px;
+        }
+      }
+      .feeling-info {
+        float: right;
+        width: 74%;
+        margin-left: 0.5%;
+        margin-right: 0.5%;
+        .info-title {
+          font-size: $font-m * 1.5;
+          font-weight: lighter;
+          letter-spacing: 2px;
+        }
+        p {
+          margin-top: 22px;
+          text-align: justify;
+          font-weight: lighter;
+          &.name {
+            display: inline-block;
+            float: right;
+            span {
+              padding: 0 5px;
+            }
+          }
+        }
+      }
+      @include phone {
+        float: none;
+        width: 100%;
+      }
+    }
+  }
+}
+
+#reservation {
+  margin-top: $section-top;
+  padding: 50px 0;
+  color: $main-color;
+  background-color: #F6F3F2;
+  h3 {
+    font-size: $font-m * 1.5;
+    font-weight: lighter;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+  .reservation-info {
+    margin-top: 35px;
+    .img-map {
+      float: left;
+      width: 48%;
+      margin-left: 1%;
+      margin-right: 1%;
+      @include phone {
+        float: none;
+        width: 98%;
+      }
+    }
+    .reservation-form {
+      float: right;
+      width: 48%;
+      margin-left: 1%;
+      margin-right: 1%;
+      label {
+        font-weight: lighter;
+      }
+      p {
+        margin-top: 12px;
+        margin-bottom: 6px;
+        font-weight: lighter;
+      }
+      #yes {
+        margin-right: 36px;
+      }
+      .form-item {
+        width: 100%;
+        margin-top: 6px;
+        margin-bottom: 12px;
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+        @include box-shadow(0px, 0px, 5px,$grey * 1.2,inset);
+        &:focus {
+          outline: none;
+        }
+      }
+      .btn-group {
+        float: right;
+        margin-top: 25px;
+      }
+      .btn {
+        width: 70px;
+        height: 32px;
+        border: none;
+        background: $grey;
+        color: #fff;
+        border-radius: 5px;
+        font-size: $font-s - 2;
+        transition: all .3s;
+        &:hover, &:focus {
+          background: $dark-grey;
+        }
+      }
+      .btn-orange {
+        background: $light-orange;
+        transition: all .3s;
+        &:hover, &:focus {
+          background: $dark-orange;
+        }
+      }
+      @include phone {
+        float: none;
+        width: 98%;
+      }
+    }
+  }
+}
