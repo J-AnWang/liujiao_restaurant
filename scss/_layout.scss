@@ -46,38 +46,39 @@ html, body {
         }
       }
     }
+
   }
   .hamburger-btn {
     display: none;
   }
   @include phone {
     .nav {
-      opacity: 0;
-      transition: all .8s ease-out;
-      &.active {
+      max-height: 0px;
+      position: absolute;
+      margin: 0;
+      top: 56px;
+      right: 0;
+      left: 0;
+      overflow: hidden;
+      background-color: rgba(0,0,0,.8);
+      z-index: 100;
+      transition: max-height 2s;
+      li {
         float: none;
-        position: absolute;
-        margin: 0;
-        top: 56px;
-        right: 0;
-        left: 0;
-        background-color: rgba(0,0,0,.8);
-        opacity: 1;
-        li {
-          float: none;
-          text-align: center;
-        }
+        text-align: center;
+      }
+      &.active {
+        max-height: 500px;
       }
     }
     .hamburger-btn {
-      display: inline-block;
+      display: block;
       float: right;
       margin-top: 16px;
       margin-right: 5%;
-      padding-top: 2px;
+      padding: 5px 10px;
       border: none;
       border-radius: 5px;
-      background-color: rgba(0,0,0,.8);
       color: #fff;
       transition: all .3s;
       &:hover, &:focus {
@@ -86,6 +87,11 @@ html, body {
       }
       &.active {
         background-color: #7D7D7D;
+        color: rgba(0,0,0,.8);
+        &:hover, &:focus {
+          background-color: #fff;
+          color: rgba(0,0,0,.8);
+        }
       }
     }
   }
