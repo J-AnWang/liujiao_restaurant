@@ -25,4 +25,14 @@ $(document).ready(function() {
   });
   $('.toTop').click(function(event) {
     $('html, body').animate({scrollTop : 0}, 800);
+  });
+  // scrollTop button
+  var showSkill = false;
+
+  $('.scrollTop').click(function(event) {
+    event.preventDefault();
+    var target = $(this).attr('href');
+    var targetPos = $(target).offset().top;
+    $('html, body').animate({scrollTop : targetPos}, 1000);
+  });
 });
