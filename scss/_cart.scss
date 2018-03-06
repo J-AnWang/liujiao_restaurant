@@ -1,0 +1,324 @@
+.cart {
+  color: $main-color;
+  margin: 50px 0;
+
+  .side-menu {
+    float: left;
+    width: 22%;
+    margin-left: 1%;
+    margin-right: 1%;
+
+    h3 {
+      font-size: $font-s * 2 - 4;
+      font-weight: lighter;
+      letter-spacing: 2px;
+
+      i.fas {
+        font-size: $font-s * 2;
+      }
+    }
+
+    .list {
+      margin-top: 16px;
+
+      li {
+        border-bottom: 1px solid $main-color;
+
+        a {
+          display: block;
+          padding: 10px;
+          font-style: $font-l;
+          font-weight: lighter;
+          letter-spacing: 1px;
+          transition: all 0.3s;
+
+          &:hover {
+            background-color: $main-color;
+            color: #fff;
+          }
+        }
+      }
+    }
+    @include phone {
+      float: none;
+      width: 98%;
+    }
+  }
+
+  .products-side {
+    float: right;
+    width: 74%;
+    margin-left: 1%;
+    margin-right: 1%;
+
+    .product-nav {
+      .search-bar {
+        width: 60%;
+        float: left;
+        margin-right: 11%;
+
+        #name {
+          float: left;
+          width: 92%;
+          border: 2px solid $main-color;
+          padding: 5px;
+          background-color: $bg-color;
+        }
+
+        .search-btn {
+          float: right;
+          width: 8%;
+          padding: 7px;
+          border: none;
+          background-color: $main-color;
+
+          i {
+            color: #fff;
+          }
+        }
+      }
+      .cart-btn {
+        width: 18%;
+        float: right;
+        margin-left: 11%;
+        margin-top: 7px;
+
+        a {
+          display: block;
+          float: left;
+          font-size: $font-l;
+          font-weight: lighter;
+          transition: all 0.3s;
+
+          &:hover {
+            color: #fff;
+          }
+
+          i {
+            position: relative;
+
+            span {
+              display: inline-block;
+              position: absolute;
+              width: 15px;
+              height: 15px;
+              top: -8px;
+              right: -8px;
+              // padding: 3px;
+              border-radius: 7.5px;
+              background-color: $light-orange;
+              font-size: $font-s - 4;
+              text-align: center;
+              line-height: 15px;
+              color: #fff;
+              font-weight: lighter;
+            }
+          }
+        }
+
+        .shop::after {
+          content: "|";
+          padding: 20px;
+          font-size: $font-m;
+          color: $main-color;
+        }
+      }
+      @include desktop {
+        .search-bar {
+          #name {
+            width: 90%;
+          }
+          .search-btn {
+            width: 10%;
+          }
+        }
+        .cart-btn {
+          width: 25%;
+          margin-left: 4%;
+        }
+      }
+      @include pad {
+        .search-bar {
+          margin-right: 0;
+          #name {
+            width: 88%;
+          }
+          .search-btn {
+            width: 12%;
+          }
+        }
+        .cart-btn {
+          width: 35%;
+          margin-left: 5%;
+        }
+      }
+      @include phone {
+        margin-top: 10px;
+        .search-bar {
+          display: none;
+        }
+        .cart-btn {
+          float: left;
+          width: 70%;
+        }
+      }
+    }
+
+    .products-list {
+      .product {
+        position: relative;
+        float: left;
+        width: 31.33333%;
+        margin-right: 2%;
+        margin-top: 30px;
+        text-align: center;
+        color: $main-color;
+        @include box-shadow(0px, 1px, 10px, rgba(0,0,0,.3));
+
+        .fa-heart {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          color: #fff;
+          font-size: $font-l + 2;
+        }
+
+        .ribbon {
+          position: absolute;
+          right: -5px;
+          top: -5px;
+          z-index: 1;
+          overflow: hidden;
+          width: 75px;
+          height: 75px;
+          text-align: right;
+        }
+
+        .ribbon span {
+          font-size: $font-m;
+          font-weight: bold;
+          color: #FFF;
+          text-align: center;
+          line-height: 20px;
+          transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+          width: 100px;
+          display: block;
+          background: #00CB98;
+          box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+          position: absolute;
+          top: 19px;
+          right: -21px;
+        }
+
+        .ribbon span::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 100%;
+          z-index: -1;
+          border-left: 3px solid #00CB98;
+          border-right: 3px solid transparent;
+          border-bottom: 3px solid transparent;
+          border-top: 3px solid #00CB98;
+        }
+
+        .ribbon span::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 100%;
+          z-index: -1;
+          border-right: 3px solid #00CB98;
+          border-left: 3px solid transparent;
+          border-bottom: 3px solid transparent;
+          border-top: 3px solid #00CB98;
+        }
+
+        img {
+          width: 100%;
+        }
+
+        .product-title {
+          margin-top: 10px;
+
+          .title {
+            font-size: $font-m * 1.25;
+            font-weight: lighter;
+            letter-spacing: 2px;
+          }
+
+          .subtitle {
+            font-weight: lighter;
+            text-transform: capitalize;
+          }
+
+          hr {
+            width: 30%;
+            margin: 8px auto 0;
+            border: none;
+            border-top: 1px solid $main-color;
+          }
+        }
+
+        .price {
+          margin-top: 20px;
+          font-size: $font-l;
+          font-style: italic;
+          letter-spacing: 1px;
+        }
+
+        .btn {
+          display: block;
+          width: 80%;
+          margin: 16px auto;
+          border: 2px solid $light-orange;
+          padding: 3px 10px;
+          border-radius: 3px;
+          font-weight: lighter;
+          letter-spacing: 2px;
+          color: $light-orange;
+          transition: all 0.3s;
+
+          i {
+            margin-right: 5px;
+          }
+
+          &:hover {
+            color: $dark-orange;
+            border: 2px solid $dark-orange;
+          }
+        }
+      }
+    }
+    @include desktop {
+      .products-list {
+        .product {
+          height: 270px;
+        }
+      }
+    }
+    @include pad {
+      .products-list {
+        .product {
+          height: 270px;
+          width: 48%;
+        }
+      }
+    }
+    @include phone {
+      float: none;
+      width: 98%;
+      .products-list {
+        .product {
+          float: none;
+          width: 98%;
+          height: auto;
+          margin-left: 1%;
+          margin-right: 1px;
+          padding-bottom: 5px;
+        }
+      }
+    }
+  }
+}
