@@ -1,12 +1,12 @@
-$(document).ready(function() {
+$(document).ready(function () {
   //menu button
-  $('.hamburger-btn').click(function(event) {
+  $('.hamburger-btn').click(function (event) {
     event.preventDefault();
     $('.nav').toggleClass('active');
     $(this).toggleClass('active');
   });
   //hidden menu option
-  $('.nav li a').click(function(event) {
+  $('.nav li a').click(function (event) {
     $(this).addClass('active');
     $(this).parent().siblings().children().removeClass('active');
   });
@@ -23,16 +23,21 @@ $(document).ready(function() {
   $(window).on('scroll', () => {
     showToTop();
   });
-  $('.toTop').click(function(event) {
-    $('html, body').animate({scrollTop : 0}, 800);
+  $('.toTop').click(function (event) {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 800);
   });
   // scrollTop button
   var showSkill = false;
 
-  $('.scrollTop').click(function(event) {
+  $('.scrollTop').click(function (event) {
     event.preventDefault();
     var target = $(this).attr('href');
     var targetPos = $(target).offset().top;
-    $('html, body').animate({scrollTop : targetPos}, 1000);
+    $('html, body').animate({
+      scrollTop: targetPos
+    }, 1000);
   });
+
 });

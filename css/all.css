@@ -171,12 +171,13 @@ ol, ul {
   margin: 0;
   padding: 0; }
 
-html, body {
+html,
+body {
   font-family: sans-serif;
   background-color: #EFE9E7; }
 
 .container {
-  width: 80%;
+  max-width: 1000px;
   margin: 0 auto; }
   @media (max-width: 768px) {
     .container {
@@ -419,7 +420,7 @@ html, body {
   color: #3C1000; }
   #tips .title {
     text-align: center; }
-    #tips .title h3 {
+    #tips .title h2 {
       font-weight: lighter;
       font-size: 24px;
       letter-spacing: 2px; }
@@ -446,7 +447,7 @@ html, body {
         border-radius: 200px; }
       #tips .detail .tip .tip-content {
         margin-top: 20px; }
-        #tips .detail .tip .tip-content h5 {
+        #tips .detail .tip .tip-content .title {
           font-size: 20px;
           font-weight: lighter; }
         #tips .detail .tip .tip-content p {
@@ -555,74 +556,65 @@ html, body {
   padding: 50px 0;
   color: #3C1000;
   background-color: #F6F3F2; }
-  #reservation h3 {
+  #reservation h2 {
     font-size: 24px;
     font-weight: lighter;
     text-align: center;
     letter-spacing: 2px; }
-  #reservation .reservation-info {
-    margin-top: 35px; }
-    #reservation .reservation-info .img-map {
-      float: left;
-      width: 48%;
-      margin-left: 1%;
-      margin-right: 1%; }
-      @media (max-width: 480px) {
-        #reservation .reservation-info .img-map {
-          float: none;
-          width: 98%; } }
-    #reservation .reservation-info .reservation-form {
+  #reservation .reservation-form {
+    margin-top: 35px;
+    float: left;
+    width: 48%;
+    margin-left: 1%;
+    margin-right: 1%; }
+    #reservation .reservation-form label {
+      font-weight: lighter; }
+    #reservation .reservation-form p {
+      margin-top: 12px;
+      margin-bottom: 6px;
+      font-weight: lighter; }
+    #reservation .reservation-form #yes {
+      margin-right: 36px; }
+    #reservation .reservation-form .form-item {
+      width: 100%;
+      margin-top: 6px;
+      margin-bottom: 12px;
+      padding: 5px;
+      border: none;
+      border-radius: 5px;
+      -webkit-box-shadow: 0px 0px 5px #c0bcbe inset;
+      -moz-box-shadow: 0px 0px 5px #c0bcbe inset;
+      box-shadow: 0px 0px 5px #c0bcbe inset; }
+      #reservation .reservation-form .form-item:focus {
+        outline: none; }
+    #reservation .reservation-form .btn-group {
       float: right;
-      width: 48%;
-      margin-left: 1%;
-      margin-right: 1%; }
-      #reservation .reservation-info .reservation-form label {
-        font-weight: lighter; }
-      #reservation .reservation-info .reservation-form p {
-        margin-top: 12px;
-        margin-bottom: 6px;
-        font-weight: lighter; }
-      #reservation .reservation-info .reservation-form #yes {
-        margin-right: 36px; }
-      #reservation .reservation-info .reservation-form .form-item {
-        width: 100%;
-        margin-top: 6px;
-        margin-bottom: 12px;
-        padding: 5px;
-        border: none;
-        border-radius: 5px;
-        -webkit-box-shadow: 0px 0px 5px #c0bcbe inset;
-        -moz-box-shadow: 0px 0px 5px #c0bcbe inset;
-        box-shadow: 0px 0px 5px #c0bcbe inset; }
-        #reservation .reservation-info .reservation-form .form-item:focus {
-          outline: none; }
-      #reservation .reservation-info .reservation-form .btn-group {
-        float: right;
-        margin-top: 25px; }
-      #reservation .reservation-info .reservation-form .btn {
-        width: 70px;
-        height: 32px;
-        border: none;
-        background: #A09D9E;
-        color: #fff;
-        border-radius: 5px;
-        font-size: 12px;
-        -webkit-transition: all .3s;
-        -o-transition: all .3s;
-        transition: all .3s; }
-        #reservation .reservation-info .reservation-form .btn:hover, #reservation .reservation-info .reservation-form .btn:focus {
-          background: #7E7C7F; }
-      #reservation .reservation-info .reservation-form .btn-orange {
-        background: #F56B22;
-        -webkit-transition: all .3s;
-        -o-transition: all .3s;
-        transition: all .3s; }
-        #reservation .reservation-info .reservation-form .btn-orange:hover, #reservation .reservation-info .reservation-form .btn-orange:focus {
-          background: #BC5007; }
-      @media (max-width: 480px) {
-        #reservation .reservation-info .reservation-form {
-          float: none;
-          width: 98%; } }
+      margin-top: 25px; }
+    #reservation .reservation-form .btn {
+      width: 70px;
+      height: 32px;
+      border: none;
+      background: #A09D9E;
+      color: #fff;
+      border-radius: 5px;
+      font-size: 12px;
+      cursor: pointer;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s; }
+      #reservation .reservation-form .btn:hover, #reservation .reservation-form .btn:focus {
+        background: #7E7C7F; }
+    #reservation .reservation-form .btn-orange {
+      background: #F56B22;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s; }
+      #reservation .reservation-form .btn-orange:hover, #reservation .reservation-form .btn-orange:focus {
+        background: #BC5007; }
+    @media (max-width: 480px) {
+      #reservation .reservation-form {
+        float: none;
+        width: 98%; } }
 
 .cart {
   color: #3C1000;
@@ -894,7 +886,8 @@ html, body {
         text-transform: capitalize; }
         .login .login-form form label:after {
           content: '*'; }
-      .login .login-form form #email, .login .login-form form #password {
+      .login .login-form form #email,
+      .login .login-form form #password {
         width: 100%;
         padding: 5px;
         border: 1px solid #CBCBCB;
@@ -920,7 +913,8 @@ html, body {
           padding: 8px 5px;
           border-radius: 3px;
           color: #fff;
-          font-weight: lighter; }
+          font-weight: lighter;
+          cursor: pointer; }
         .login .login-form form .btn-group .grey {
           margin-right: 4%;
           background-color: #A09D9E;
