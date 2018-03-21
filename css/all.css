@@ -453,6 +453,11 @@ body {
         #tips .detail .tip .tip-content p {
           margin-top: 11px;
           text-align: left; }
+      @media (max-width: 767px) {
+        #tips .detail .tip {
+          float: none;
+          width: 80%;
+          margin: 0 auto; } }
       @media (max-width: 480px) {
         #tips .detail .tip {
           float: none;
@@ -473,6 +478,11 @@ body {
     @media (max-width: 1000px) {
       #chef .chef-img {
         width: 38%; } }
+    @media (max-width: 767px) {
+      #chef .chef-img {
+        float: none;
+        width: 70%;
+        margin: 0 auto; } }
     @media (max-width: 480px) {
       #chef .chef-img {
         float: none;
@@ -499,6 +509,12 @@ body {
     @media (max-width: 1000px) {
       #chef .chef-info {
         width: 58%; } }
+    @media (max-width: 767px) {
+      #chef .chef-info {
+        float: none;
+        width: 70%;
+        margin: 0 auto;
+        padding: 20px 0 10px; } }
     @media (max-width: 480px) {
       #chef .chef-info {
         float: none;
@@ -546,6 +562,11 @@ body {
             float: right; }
             .feelings .feelings-detail .feeling .feeling-info p.name span {
               padding: 0 5px; }
+      @media (max-width: 767px) {
+        .feelings .feelings-detail .feeling {
+          float: none;
+          width: 80%;
+          margin: 0 auto; } }
       @media (max-width: 480px) {
         .feelings .feelings-detail .feeling {
           float: none;
@@ -611,6 +632,11 @@ body {
       transition: all .3s; }
       #reservation .reservation-form .btn-orange:hover, #reservation .reservation-form .btn-orange:focus {
         background: #BC5007; }
+    @media (max-width: 767px) {
+      #reservation .reservation-form {
+        float: none;
+        width: 80%;
+        margin: 35px auto; } }
     @media (max-width: 480px) {
       #reservation .reservation-form {
         float: none;

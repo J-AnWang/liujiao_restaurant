@@ -41,6 +41,11 @@
           text-align: left;
         }
       }
+      @include padToPhone {
+        float: none;
+        width: 80%;
+        margin: 0 auto;
+      }
       @include phone {
         float: none;
         width: 100%;
@@ -64,6 +69,11 @@
     }
     @include desktop {
       width: 38%;
+    }
+    @include padToPhone {
+      float: none;
+      width: 70%;
+      margin: 0 auto;
     }
     @include phone {
       float: none;
@@ -94,6 +104,12 @@
     }
     @include desktop {
       width: 58%;
+    }
+    @include padToPhone {
+      float: none;
+      width: 70%;
+      margin: 0 auto;
+      padding: 20px 0 10px;
     }
     @include phone {
       float: none;
@@ -147,6 +163,11 @@
             }
           }
         }
+      }
+      @include padToPhone {
+        float: none;
+        width: 80%;
+        margin: 0 auto;
       }
       @include phone {
         float: none;
@@ -222,6 +243,11 @@
       &:focus {
         background: $dark-orange;
       }
+    }
+    @include padToPhone {
+      float: none;
+      width: 80%;
+      margin: 35px auto;
     }
     @include phone {
       float: none;

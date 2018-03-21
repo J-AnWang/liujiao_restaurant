@@ -9,17 +9,15 @@ $dark-orange: #BC5007 !default;
 $google-plus-color: #DA4336 !default;
 $twitter-color: #41AAE1 !default;
 $fb-color: #3A5694 !default;
-
 // font
 $font-family: sans-serif;
 $font-m: 16px !default;
 $font-l: $font-m * 1.125;
 $font-s: $font-m * 0.875;
-
 // media
 $desktop-media: 1000px;
 $pad-media: 768px;
+$padToPhone-media :$pad-media - 1;
 $phone-media: 480px;
-
 //section
 $section-top: 50px;
